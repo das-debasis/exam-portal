@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,500;1,600;1,700;1,800&display=swap");
+* {
+  font-family: Poppins;
+  padding-top: 0px;
+}
+body{
+  background-color: rgb(241, 241, 241);
+}
+.lefto{
+    float:left;
+    width: 45%;
+    margin-right: 2%;
+    padding: 20px;
+}
+.righto{
+    margin-top: 20px;
+    padding: 20px;
+    float:left;
+    width:45%;
+    background-color: rgb(255, 255, 255);
+    /* border: 2px solid black; */
+    border-radius: 20px;
+}
+button{
+  background-color: rgb(34, 34, 34);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: medium;
+  color: white;
+  width: 20%;
+  border: 0px;
+  padding:1% 0px 1% 0px;
+}
+button:hover{
+  background-color: rgb(43, 43, 43);
+}
+textarea{
+  /* border: 2px solid black; */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  border:none;
+  width: 93%;
+
+}
+.card{
+  background-color: rgb(255, 255, 255);
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  padding: 20px;
+}
+.card1{
+  background-color: rgb(246, 246, 246);
+  border-radius: 10px;
+  padding: 20px;
+}
+.mainlike{
+  float: right;
+  padding-bottom: 20px;
+}
+.title{
+  font-weight: bold;
+  color: rgb(31, 31, 31);
+}
+.form input{
+  width: 75%;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(246, 246, 246);
+  border: 0px;
+
+}
+.mainc{
+  float: right;
+  border: none;
+}
+.mainc:hover{
+  background-color: rgb(43, 43, 43);
+}
