@@ -2,8 +2,9 @@ import React from "react";
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-export const ThoughtList = (props) => {
+export const ThoughtList = () => {
   const [thought, setThought] = useState([]);
+  const [thoughtmain, setThoughtMain] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
     getThought();
@@ -22,7 +23,7 @@ export const ThoughtList = (props) => {
         rows="10"
       ></textarea>
       <br />
-      <button class="b">Create</button>
+      <button className="b">Create</button>
       <br />
       <br />
       {thought.map((singleData, index) => {

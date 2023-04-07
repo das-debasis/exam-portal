@@ -78,3 +78,8 @@ textarea{
 .mainc:hover{
   background-color: rgb(43, 43, 43);
 }
+.rightImage{
+  width: 550px;
+  height: 550px;
+  text-align: center;
+}
