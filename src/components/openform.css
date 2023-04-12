@@ -54,6 +54,7 @@ textarea{
   background-color: rgb(246, 246, 246);
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
 }
 .mainlike{
   float: right;
@@ -77,4 +78,9 @@ textarea{
 }
 .mainc:hover{
   background-color: rgb(43, 43, 43);
+}
+.rightImage{
+  width: 550px;
+  height: 550px;
+  text-align: center;
 }
