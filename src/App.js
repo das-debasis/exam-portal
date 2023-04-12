@@ -1,4 +1,3 @@
-import { Thought } from "./components/Thought";
 import { Navbar } from "./components/Navbar";
 import { ThoughtList } from "./components/ThoughtList";
 import "./components/index.css";
@@ -10,15 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route
-          path="/openforum"
-          element={
-            <>
-              <ThoughtList />
-              <Thought />
-            </>
-          }
-        />
+        <Route path="/openforum" element={<ThoughtList />} />
         <Route path="/" element={<Landing />} />
       </Routes>
     </div>
