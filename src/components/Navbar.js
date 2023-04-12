@@ -6,10 +6,10 @@ export const Navbar = () => {
   return (
     <div className="header">
       <nav>
-        <a href="index.html">e-Exam</a>
-        <a href="openform.html">Openforum</a>
+        <a href="/">e-Exam</a>
+        <a href="/openforum">Openforum</a>
         <a href="">e-Repository</a>
-        <a href="mywall.html">MyWall</a>
+        <a href="">MyWall</a>
       </nav>
       <div className="form-input">
         <input type="text" className="search_bar" />
@@ -22,7 +22,7 @@ export const Navbar = () => {
       </div>
       <div className="login">
         <nav className="login">
-          <a href="register.html">SIGNUP</a>
+          <a href="Register.js">SIGNUP</a>
         </nav>
       </div>
     </div>
