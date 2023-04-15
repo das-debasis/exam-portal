@@ -32,7 +32,7 @@ body {
     padding-top: 0px
   }
   .img_style {
-    width: 45%;
+    width: 50%;
     height: auto;
     margin-right: 10%
   }
@@ -56,7 +56,7 @@ body {
   }
   .imga {
     display: flex;
-    width: 70%;
+    width: 80%;
   }
   #btnaa {
     width: 84%;
