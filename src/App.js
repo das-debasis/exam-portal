@@ -8,6 +8,8 @@ import "./components/login.css";
 import "./components/Landing.css";
 import { Routes, Route } from "react-router-dom";
 import { Landing } from "./components/Landing";
+import 'bootstrap/dist/css/bootstrap.css';
+import {Register} from './components/Register';
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         {/* <Route path="/openforum" element={<ThoughtList />} /> */}
         <Route path="/" element={<Landing />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>
