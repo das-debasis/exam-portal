@@ -22,7 +22,7 @@ export const Navbar = () => {
       </div>
       <div className="login">
         <nav className="login">
-          <a href="Register.js">SIGNUP</a>
+          <a href="Register">SIGNUP</a>
         </nav>
       </div>
     </div>
