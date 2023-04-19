@@ -1,0 +1,63 @@
+body {
+    background-attachment: fixed;
+    font-family: "Poppins";
+  }
+  /* .login_main{
+    background-color: white;
+  } */
+  /* p {
+    font-weight: 400;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  } */
+  a:hover {
+    color: rgba(0, 0, 0, 0.747);
+    transition: 0.3s;
+    transition-timing-function: ease;
+  }
+  #signup {
+    text-decoration: underline;
+  }
+  #acnt {
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  .pw {
+    padding: 20px 40px 40px 40px;
+    text-align: left
+  }
+  .login_h1 {
+    padding-top: 0px
+  }
+  .img_style {
+    width: 50%;
+    height: auto;
+    margin-right: 10%
+  }
+  .xyz {
+    text-align: center;
+    margin-top: 70px;
+    border-radius: 10px;
+    /* border: 2px solid rgb(141, 141, 141); */
+    background-color: rgba(52, 70, 143, 0.103);
+    width: 50%;
+    margin: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    align-items: flex-end;
+  }
+  #aaa {
+    padding: 20px 40px 0px 40px;
+    text-align: left;
+  }
+  .imga {
+    display: flex;
+    width: 80%;
+  }
+  #btnaa {
+    width: 84%;
+  }

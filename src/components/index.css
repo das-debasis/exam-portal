@@ -22,7 +22,8 @@ nav a {
   margin : 10px 20px 10px 20px;
 }
 .landimage{
-  width: 30%;
+  width: 35%;
+  height: auto;
 }
 .landingpage {
     margin-top: 20px;
