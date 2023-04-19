@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 import { Navbar } from "./components/Navbar";
 // import { ThoughtList } from "./components/ThoughtList";
 import { Login } from "./components/Login";

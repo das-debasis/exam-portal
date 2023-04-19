@@ -4,13 +4,14 @@
   padding-top: 0px;
 }
 body{
-  background-color: rgb(241, 241, 241);
+  background-color: #f1f1f1;
 }
 .lefto{
     float:left;
-    width: 45%;
+    width: 47%;
     margin-right: 2%;
     padding: 20px;
+    margin-left: 2%;
 }
 .righto{
     margin-top: 20px;
@@ -19,7 +20,7 @@ body{
     width:45%;
     background-color: rgb(255, 255, 255);
     /* border: 2px solid black; */
-    border-radius: 20px;
+    border-radius: 10px;
 }
 button{
   background-color: rgb(34, 34, 34);
@@ -40,7 +41,8 @@ textarea{
   border-radius: 10px;
   margin-bottom: 5px;
   border:none;
-  width: 93%;
+  width: 100%;
+  resize: none;
 
 }
 .card{
