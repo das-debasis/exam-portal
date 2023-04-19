@@ -17,7 +17,7 @@ export const Landing = () => {
           for its administration.
         </span>
         <div className="getstarted">
-          <a href="Login.js">GET STARTED</a>
+          <a href="Login">GET STARTED</a>
         </div>
       </div>
       <img className="landimage" src="main.png" alt="" />

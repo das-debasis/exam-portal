@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import { Navbar } from "./components/Navbar";
-import { ThoughtList } from "./components/ThoughtList";
+// import { ThoughtList } from "./components/ThoughtList";
 import { Login } from "./components/Login";
 import "./components/index.css";
 import "./components/openform.css";
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/openforum" element={<ThoughtList />} />
+        {/* <Route path="/openforum" element={<ThoughtList />} /> */}
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
       </Routes>
