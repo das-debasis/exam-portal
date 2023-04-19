@@ -2,7 +2,13 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import AuthContext from "../store/AuthContext";
 export const Navbar = () => {
+  const AuthCtx = useContext(AuthContext);
+  const LogoutHandler = () => {
+    AuthCtx.setIsLoggedIn(false);
+    localStorage.clear();
+  };
   return (
     <div className="header">
       <nav>
@@ -21,9 +27,15 @@ export const Navbar = () => {
         </button>
       </div>
       <div className="login">
-        <nav className="login">
-          <a href="Register">SIGNUP</a>
-        </nav>
+        {!localStorage.getItem("token") ? (
+          <nav className="login">
+            <a href="Register">SIGNUP</a>
+          </nav>
+        ) : (
+          <nav className="logout" onClick={LogoutHandler}>
+            LOGOUT
+          </nav>
+        )}
       </div>
     </div>
   );

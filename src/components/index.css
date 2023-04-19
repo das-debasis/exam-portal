@@ -5,6 +5,15 @@
 nav {
   padding: 10px;
 }
+.logout{
+  font-size: 20px;
+  border-collapse: collapse;
+  margin : 0;
+  margin-right: 20px;
+}
+.logout:hover{
+  cursor: pointer;
+}
 a{
   text-decoration: none;
   color: black;
