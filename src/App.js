@@ -2,10 +2,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Navbar } from "./components/Navbar";
 import { ThoughtList } from "./components/ThoughtList";
 import { Login } from "./components/Login";
+import { MyWall } from "./components/MyWall";
 import "./components/index.css";
 import "./components/openform.css";
 import "./components/login.css";
 import "./components/Landing.css";
+import "./components/mywall.css";
 import { Routes, Route } from "react-router-dom";
 import { Landing } from "./components/Landing";
 import "bootstrap/dist/css/bootstrap.css";
@@ -21,6 +23,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/mywall" element={<MyWall />} />
         </Routes>
       </AuthState>
     </div>
