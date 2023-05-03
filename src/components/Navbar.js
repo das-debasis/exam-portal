@@ -5,14 +5,17 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import AuthContext from "../store/AuthContext";
 export const Navbar = () => {
   const AuthCtx = useContext(AuthContext);
+  const navigate = useNavigate();
   const LogoutHandler = () => {
     AuthCtx.setIsLoggedIn(false);
     localStorage.clear();
+    navigate("/");
   };
   return (
     <div className="header">
       <nav>
-        <a href="/">e-Exam</a>
+        <a href="/">home</a>
+        <a href="/exam">e-Exam</a>
         <a href="/openforum">Openforum</a>
         <a href="">e-Repository</a>
         <a href="/mywall">MyWall</a>
