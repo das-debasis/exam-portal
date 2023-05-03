@@ -10,6 +10,7 @@ import "./components/Landing.css";
 import "./components/mywall.css";
 import "./components/StartExam.css";
 import "./components/Exam.css";
+import "./components/product.css";
 import { Routes, Route } from "react-router-dom";
 import { Landing } from "./components/Landing";
 import "bootstrap/dist/css/bootstrap.css";
@@ -18,6 +19,7 @@ import { AuthState } from "./store/AuthState";
 import { ProtectRoute } from "./components/ProtectRoute";
 import { StartExam } from "./components/StartExam";
 import { Exam } from "./components/Exam";
+import { Erep } from "./components/erep";
 function App() {
   return (
     <div className="App">
@@ -26,14 +28,14 @@ function App() {
         <Routes>
           <Route element={<ProtectRoute />}>
             <Route path="/openforum" element={<ThoughtList />} />
+            <Route path="/mywall" element={<MyWall />} />
+            <Route path="/exam" element={<StartExam />} />
+            <Route path="/mainexam" element={<Exam />} />
           </Route>
           <Route path="/" element={<Landing />} />
-          <Route path="/mainexam" element={<Exam />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/exam" element={<StartExam />} />
-          <Route path="/exam" element={<StartExam />} />
+          <Route path="/erep" element={<Erep />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/mywall" element={<MyWall />} />
         </Routes>
       </AuthState>
     </div>

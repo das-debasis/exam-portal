@@ -11,10 +11,11 @@ body{
   overflow: scroll;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(239, 239, 239); 
+  background: rgb(228, 228, 228); 
+  padding-left: 10px;
   border-radius: 10px;
 }
 .lefto{
@@ -96,4 +97,29 @@ textarea{
   width: 550px;
   height: 550px;
   text-align: center;
+}
+.icon1{
+  width: 15px;
+  height: 15px;
+  display: inline;
+  margin-right: 4px;
+}
+.commentLength{
+  padding-top: 5px;
+  display: inline;
+  width: 10px;
+}
+.createdBy{
+  float: right;
+  font-size: 13px;
+  color: rgb(133, 133, 133);
+  display: inline;
+}
+.createdBy1{
+  float: right;
+  font-size: 13px;
+  color: rgb(133, 133, 133);
+}
+.card:hover{
+  background-color: rgb(229, 229, 229);
 }

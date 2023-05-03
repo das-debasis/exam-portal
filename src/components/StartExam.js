@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-// import AuthContext from "../store/AuthContext";
 export const StartExam = () => {
   return (
     <div className="start-container">

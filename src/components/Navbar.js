@@ -17,7 +17,7 @@ export const Navbar = () => {
         <a href="/">home</a>
         <a href="/exam">e-Exam</a>
         <a href="/openforum">Openforum</a>
-        <a href="">e-Repository</a>
+        <a href="/erep">e-Repository</a>
         <a href="/mywall">MyWall</a>
       </nav>
       <div className="form-input">

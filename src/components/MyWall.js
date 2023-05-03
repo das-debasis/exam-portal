@@ -1,30 +1,38 @@
 import React from "react";
 import Call from "../images/call.jpg";
-import Github from "../images/github.png";
+import Org from "../images/school.png";
 import Mail from "../images/mail.png";
 import image from "../images/123.png";
-export const MyWall = (props) => {
-    return (
-        <div className="content">
-        <div className="left">
-            <div className="iname">
-                PRADOSH 
-            <br/>
-            KUMAR
-            <br/>
-            SAHOO
-            </div>
-            <div className="details">
-                <a href="mailto:pradoshsahoo81@gmail.com"> <img className="icon" src={Mail} alt=""/> pradoshsahoo81@gmail.com</a>
-                <br/>
-                <a href="http://github.com/pradoshsahoo"><img className="icon" src={Github} alt=""/> git.hub/pradoshsahoo</a>
-                <br/>
-                <a href="tel:7008123452"><img className="icon" src={Call} alt=""/> +917008071464</a>
-            </div>
+export const MyWall = () => {
+  const user_data = JSON.parse(localStorage.getItem("user"));
+  return (
+    <div className="content">
+      <div className="left">
+        <div className="iname">
+          {user_data.fname}
+          <br />
+          {user_data.lname}
         </div>
-        <div className="dp">
-            <img src={image} alt=""/>
+        <div className="details">
+          <a href="">
+            <img className="icon" src={Mail} alt="" /> {user_data.email}
+          </a>
+          <br />
+          <a href="">
+            <img className="icon" src={Call} alt="" />
+            {user_data.contact}
+          </a>
+          <br />
+          <a href="">
+            <img className="icon" src={Org} alt="" /> {user_data.org}
+          </a>
         </div>
-        </div>
-    )
-}
+      </div>
+      <div className="dp">
+        <br />
+        <br />
+        <img src={image} alt="" />
+      </div>
+    </div>
+  );
+};
