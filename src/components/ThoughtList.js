@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Image from "../images/Learning-bro.png";
 export const ThoughtList = () => {
+  const user_data = JSON.parse(localStorage.getItem("user"));
   const [thought, setThought] = useState([]);
   const [thoughtind, setThoughtInd] = useState(-1);
   const [create, setCreate] = useState("");
@@ -28,7 +29,7 @@ export const ThoughtList = () => {
   //     setVcomment(comment_data.comments);
   //   };
   const createHandler = async (e) => {
-    if (create == "") {
+    if (create == "" || !create.trim()) {
       setErr("Write something");
     } else {
       await saveThoughtData(create);
@@ -37,7 +38,7 @@ export const ThoughtList = () => {
   };
   const commentHandler = async (e) => {
     e.preventDefault();
-    if (comment == "") {
+    if (comment == "" || !comment.trim()) {
       setCerr("Write something");
     } else {
       await saveCommentData(comment);
@@ -47,7 +48,7 @@ export const ThoughtList = () => {
   const saveThoughtData = async (create) => {
     const thought1 = {
       thoughtText: create,
-      thoughtCreatedBy: "pradoshpks",
+      thoughtCreatedBy: user_data.email,
     };
     const message = await axios.post("http://localhost:1000/thought", thought1);
     setErr(message.message);
@@ -55,7 +56,7 @@ export const ThoughtList = () => {
   const saveCommentData = async (comment) => {
     const comment1 = {
       commentText: comment,
-      commentCreatedBy: "pradoshpks",
+      commentCreatedBy: user_data.email,
     };
     const URL =
       "http://localhost:1000/thought/addcomment/" + thought[thoughtind]._id;
@@ -66,6 +67,7 @@ export const ThoughtList = () => {
   return (
     <div>
       <div className="lefto">
+        {err ? <div className="errorMessage1">{err}</div> : null}
         <textarea
           placeholder="Type here..."
           name="write something"
@@ -80,20 +82,22 @@ export const ThoughtList = () => {
         </button>
         <br />
         <br />
-        {thought.map((singleData, index) => {
-          return (
-            <div
-              className="card"
-              key={index}
-              onClick={() => setThoughtInd(index)}
-            >
-              {singleData.thoughtText}
-              <br />
-              {singleData.thoughtComments.length} &nbsp;
-              {singleData.thoughtCreatedBy}
-            </div>
-          );
-        })}
+        <div className="thoughtList">
+          {thought.map((singleData, index) => {
+            return (
+              <div
+                className="card"
+                key={index}
+                onClick={() => setThoughtInd(index)}
+              >
+                {singleData.thoughtText}
+                <br />
+                {singleData.thoughtComments.length} &nbsp;
+                {singleData.thoughtCreatedBy}
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div>
         {thoughtind == -1 ? (
@@ -109,6 +113,7 @@ export const ThoughtList = () => {
             <br />
             <br />
             <form className="form">
+              {cerr ? <div className="errorMessage1">{cerr}</div> : null}
               <input
                 id="comment"
                 type="text"

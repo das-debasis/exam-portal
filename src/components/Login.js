@@ -38,7 +38,22 @@ export const Login = (props) => {
       })
       .then((response) => {
         // window.location.reload(false);
-        localStorage.setItem("user", response.data.user);
+        // const user=response.data.user;
+        // const user_data={
+        //   id:user._id
+
+        // }
+        // const { fname, lname, contact, email, org, _id } = response.data.user;
+        // const user1_data = {
+        //   fname,
+        //   lname,
+        //   contact,
+        //   email,
+        //   org,
+        //   _id,
+        // };
+        localStorage.setItem("user", JSON.stringify(response.data.user));
+        // console.log(user1_data);
         localStorage.setItem("token", response.data.token);
         AuthCtx.setIsLoggedIn(true);
         navigate("/");
@@ -62,7 +77,7 @@ export const Login = (props) => {
           <div id="aaa">
             <label htmlFor="username">Email : </label>
             <input
-              type="text"
+              type="email"
               className="form-control"
               placeholder="pkayy@gmail.com"
               onChange={EmailHandler}

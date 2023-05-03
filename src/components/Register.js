@@ -83,32 +83,45 @@ export const Register = () => {
     if (formInput.fname == "") {
       setErr({
         isError: true,
-        message: "Enter full name",
+        message: "Enter first name",
       });
     } else if (formInput.lname == "") {
       setErr({
         isError: true,
-        message: "Enter lname",
+        message: "Enter last name",
       });
-    } else if (formInput.email == "") {
+    } else if (
+      formInput.email == "" ||
+      /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/.test(formInput.email) ==
+        false
+    ) {
       setErr({
         isError: true,
-        message: "Enter email",
+        message: "Email not valid",
       });
-    } else if (formInput.contact == "") {
+    } else if (
+      formInput.contact == "" ||
+      formInput.contact.length != 10 ||
+      /^[0-9]*$/.test(formInput.contact) == false
+    ) {
       setErr({
         isError: true,
-        message: "Enter contact",
+        message: "Contact is not valid",
       });
     } else if (formInput.org == "") {
       setErr({
         isError: true,
         message: "Enter organization",
       });
-    } else if (formInput.password == "") {
+    } else if (
+      formInput.password == "" ||
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/.test(
+        formInput.password
+      ) == false
+    ) {
       setErr({
         isError: true,
-        message: "Enter password",
+        message: "Password is not valid  ",
       });
     } else if (formInput.confirmPassword == "") {
       setErr({
