@@ -5,11 +5,12 @@ import { Login } from "./components/Login";
 import "./components/index.css";
 import "./components/openform.css";
 import "./components/login.css";
+import "./components/Quiz.css";
 import "./components/Landing.css";
 import { Routes, Route } from "react-router-dom";
 import { Landing } from "./components/Landing";
-import 'bootstrap/dist/css/bootstrap.css';
 import {Register} from './components/Register';
+import {Quiz} from './components/Quiz';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </div>
   );

@@ -24,9 +24,10 @@ export const Landing = () => {
         <img className="landimage" src={Main} alt="" />
       </div>
       <div className="abt">
-        <h2 style={{ color: "black", fontSize: "45px", padding: "30px 0px" }}>
-          <u>About e-Exam Portal</u>
-        </h2>
+      <br />
+          <span className="good2">ABOUT</span>
+          <div className="rect2"></div>
+          <br />
         <div style={{ padding: "0px 40px 40px" }}>
           <table style={{ textAlign: "left", fontSize: "20px" }}>
             <tr>
