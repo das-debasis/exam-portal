@@ -3,6 +3,7 @@ import axios from "axios";
 import AuthContext from "../store/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import Comp from "../images/Computer login.gif";
+import { Navbar } from "./Navbar";
 export const Login = (props) => {
   const AuthCtx = useContext(AuthContext);
   const navigate = useNavigate();
@@ -65,49 +66,52 @@ export const Login = (props) => {
   };
 
   return (
-    <center className="login_main">
-      <div className="imga">
-        <img src={Comp} className="img_style" />
+    <>
+      <Navbar />
+      <center className="login_main">
+        <div className="imga">
+          <img src={Comp} className="img_style" />
 
-        <div className="xyz">
-          <h1 className="login_h1">Login</h1>
-          {err.isError ? (
-            <div className="errorMessage">{err.message}</div>
-          ) : null}
-          <div id="aaa">
-            <label htmlFor="username">Email : </label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="pkayy@gmail.com"
-              onChange={EmailHandler}
-            />
-          </div>
-          <div className="pw">
-            <label htmlFor="username">Password : </label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="123456789"
-              onChange={PasswordHandler}
-            />
-          </div>
-          <button
-            type="submit"
-            className="btn btn-dark"
-            id="btnaa"
-            onClick={loginHandler}
-          >
-            CONTINUE
-          </button>
-          <div id="acnt">
-            Don't have an account?
-            <a href="register.html" id="signup">
-              Sign Up
-            </a>
+          <div className="xyz">
+            <h1 className="login_h1">Login</h1>
+            {err.isError ? (
+              <div className="errorMessage">{err.message}</div>
+            ) : null}
+            <div id="aaa">
+              <label htmlFor="username">Email : </label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="pkayy@gmail.com"
+                onChange={EmailHandler}
+              />
+            </div>
+            <div className="pw">
+              <label htmlFor="username">Password : </label>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="123456789"
+                onChange={PasswordHandler}
+              />
+            </div>
+            <button
+              type="submit"
+              className="btn btn-dark"
+              id="btnaa"
+              onClick={loginHandler}
+            >
+              CONTINUE
+            </button>
+            <div id="acnt">
+              Don't have an account?
+              <a href="/register" id="signup">
+                Sign Up
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </center>
+      </center>
+    </>
   );
 };

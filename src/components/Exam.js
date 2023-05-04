@@ -29,44 +29,54 @@ export const Exam = () => {
       id: 4,
       question: "What is the largest planet in our solar system?",
       options: ["Jupiter", "Mars", "Venus", "Mercury"],
-      answer: "Jupiter"
+      answer: "Jupiter",
     },
     {
       id: 5,
       question: "What is the smallest country in the world?",
       options: ["Vatican City", "Monaco", "Nauru", "San Marino"],
-      answer: "Vatican City"
+      answer: "Vatican City",
     },
     {
       id: 6,
       question: "What is the main language spoken in Brazil?",
       options: ["Portuguese", "Spanish", "French", "Italian"],
-      answer: "Portuguese"
+      answer: "Portuguese",
     },
     {
       id: 7,
       question: "What is the highest mountain in the world?",
       options: ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"],
-      answer: "Mount Everest"
+      answer: "Mount Everest",
     },
     {
       id: 8,
       question: "What is the national animal of Australia?",
       options: ["Kangaroo", "Koala", "Emu", "Tasmanian devil"],
-      answer: "Kangaroo"
+      answer: "Kangaroo",
     },
     {
       id: 9,
       question: "Who was the first person to step on the moon?",
-      options: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
-      answer: "Neil Armstrong"
+      options: [
+        "Neil Armstrong",
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "Alan Shepard",
+      ],
+      answer: "Neil Armstrong",
     },
     {
       id: 10,
       question: "What is the largest ocean in the world?",
-      options: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
-      answer: "Pacific Ocean"
-    }    
+      options: [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+      ],
+      answer: "Pacific Ocean",
+    },
   ];
 
   useEffect(() => {
@@ -137,10 +147,23 @@ export const Exam = () => {
           />
         </>
       ) : (
-        <div className="quiz-results">
-          <h1 className="secured">You secured</h1>
-          <div className="marks">{count}<div className="sml">/10</div></div>
-        </div>
+        <>
+          <div className="quiz-results">
+            <h1 className="secured">You secured</h1>
+            <div className="marks">
+              {count}
+              <div className="sml">/10</div>
+            </div>
+            <br />
+          </div>
+          <div className="clearfix"></div>
+          <a href="/mainexam">
+            <button className="button2">RESTART</button>
+          </a>
+          <a href="/">
+            <button className="button2">EXIT</button>
+          </a>
+        </>
         // <Results score={final} handleRestartClick={handleRestartClick} />
       )}
     </div>
@@ -180,10 +203,7 @@ function QuestionContainer({
           </label>
         ))}
       </div>
-      <button onClick={handleNextClick}>
-        {!(currentQuestion === questions.length - 1) ? <>Previous</> : <>Submit</>}
-      </button>    
-      <button onClick={handleNextClick}>
+      <button className="button1" onClick={handleNextClick}>
         {!(currentQuestion === questions.length - 1) ? <>Next</> : <>Submit</>}
       </button>
     </div>

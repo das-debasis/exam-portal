@@ -2,6 +2,7 @@ import React from "react";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { Navbar } from "./Navbar";
 export const Register = () => {
   const navigate = useNavigate();
   const [formInput, setFormInput] = useState({
@@ -161,86 +162,89 @@ export const Register = () => {
     );
   };
   return (
-    <div
-      style={{
-        margin: "70px auto",
-        fontFamily: "Poppins",
-        textAlign: "center",
-        borderRadius: "10px",
-        backgroundColor: "rgba(52, 70, 143, 0.103)",
-        width: "40%",
-      }}
-    >
-      <h1 style={{ paddingTop: "40px" }}>Register</h1>
-      {err.isError ? <div className="errorMessage">{err.message}</div> : null}
+    <>
+      <Navbar />
+
       <div
         style={{
-          padding: "20px 40px 0px 40px",
-          textAlign: "left",
-          fontWeight: "bold",
+          margin: "70px auto",
+          fontFamily: "Poppins",
+          textAlign: "center",
+          borderRadius: "10px",
+          backgroundColor: "rgba(52, 70, 143, 0.103)",
+          width: "40%",
         }}
       >
-        <label htmlFor="email">First Name : </label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Prajosh"
-          onChange={FirstNameHandler}
-        />
-      </div>
-      <div
-        style={{
-          padding: "20px 40px 0px 40px",
-          textAlign: "left",
-          fontWeight: "bold",
-        }}
-      >
-        <label htmlFor="email">Last Name : </label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Sahoo"
-          onChange={LastNameHandler}
-        />
-      </div>
-      <div
-        style={{
-          padding: "20px 40px 0px 40px",
-          textAlign: "left",
-          fontWeight: "bold",
-        }}
-      >
-        <label htmlFor="email">Email : </label>
-        <input
-          type="email"
-          className="form-control"
-          placeholder="abc@xyz.com"
-          onChange={EmailHandler}
-        />
-      </div>
-      <div
-        style={{
-          padding: "20px 40px 0px 40px",
-          textAlign: "left",
-          fontWeight: "bold",
-        }}
-      >
-        <label htmlFor="email">Contact : </label>
-        <input
-          type="tel"
-          className="form-control"
-          placeholder="123456789"
-          onChange={ContactHandler}
-        />
-      </div>
-      <div
-        style={{
-          padding: "20px 40px 0px 40px",
-          textAlign: "left",
-          fontWeight: "bold",
-        }}
-      >
-        {/* <label htmlFor="username">Contact : </label>
+        <h1 style={{ paddingTop: "40px" }}>Register</h1>
+        {err.isError ? <div className="errorMessage">{err.message}</div> : null}
+        <div
+          style={{
+            padding: "20px 40px 0px 40px",
+            textAlign: "left",
+            fontWeight: "bold",
+          }}
+        >
+          <label htmlFor="email">First Name : </label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Prajosh"
+            onChange={FirstNameHandler}
+          />
+        </div>
+        <div
+          style={{
+            padding: "20px 40px 0px 40px",
+            textAlign: "left",
+            fontWeight: "bold",
+          }}
+        >
+          <label htmlFor="email">Last Name : </label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Sahoo"
+            onChange={LastNameHandler}
+          />
+        </div>
+        <div
+          style={{
+            padding: "20px 40px 0px 40px",
+            textAlign: "left",
+            fontWeight: "bold",
+          }}
+        >
+          <label htmlFor="email">Email : </label>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="abc@xyz.com"
+            onChange={EmailHandler}
+          />
+        </div>
+        <div
+          style={{
+            padding: "20px 40px 0px 40px",
+            textAlign: "left",
+            fontWeight: "bold",
+          }}
+        >
+          <label htmlFor="email">Contact : </label>
+          <input
+            type="tel"
+            className="form-control"
+            placeholder="123456789"
+            onChange={ContactHandler}
+          />
+        </div>
+        <div
+          style={{
+            padding: "20px 40px 0px 40px",
+            textAlign: "left",
+            fontWeight: "bold",
+          }}
+        >
+          {/* <label htmlFor="username">Contact : </label>
         <table>
           <tr>
             <th>
@@ -258,60 +262,61 @@ export const Register = () => {
             </th>
           </tr>
         </table> */}
-        <div
-          style={{
-            padding: "0px 0px 0px 0px",
-            textAlign: "left",
-            fontWeight: "bold",
-          }}
-        >
-          <label htmlFor="username">Organization : </label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="SIT, BBSR"
-            onChange={OrgHandler}
-          />
+          <div
+            style={{
+              padding: "0px 0px 0px 0px",
+              textAlign: "left",
+              fontWeight: "bold",
+            }}
+          >
+            <label htmlFor="username">Organization : </label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="SIT, BBSR"
+              onChange={OrgHandler}
+            />
+          </div>
+          <div
+            style={{
+              padding: "20px 0px 0px 0px",
+              textlign: "left",
+              fontWeight: "bold",
+            }}
+          >
+            <label htmlFor="username">Password : </label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password"
+              onChange={PasswordHandler}
+            />
+          </div>
+          <div
+            style={{
+              padding: "20px 0px 40px 0px",
+              textlign: "left",
+              fontWeight: "bold",
+            }}
+          >
+            <label htmlFor="username">Confirm Password : </label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password"
+              onChange={ConfirmPasswordHandler}
+            />
+          </div>
+          <button
+            type="submit"
+            className="btn btn-dark"
+            style={{ width: "100%", marginBottom: "40px" }}
+            onClick={formSubmitHandler}
+          >
+            Register
+          </button>
         </div>
-        <div
-          style={{
-            padding: "20px 0px 0px 0px",
-            textlign: "left",
-            fontWeight: "bold",
-          }}
-        >
-          <label htmlFor="username">Password : </label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Password"
-            onChange={PasswordHandler}
-          />
-        </div>
-        <div
-          style={{
-            padding: "20px 0px 40px 0px",
-            textlign: "left",
-            fontWeight: "bold",
-          }}
-        >
-          <label htmlFor="username">Confirm Password : </label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Password"
-            onChange={ConfirmPasswordHandler}
-          />
-        </div>
-        <button
-          type="submit"
-          className="btn btn-dark"
-          style={{ width: "100%", marginBottom: "40px" }}
-          onClick={formSubmitHandler}
-        >
-          Register
-        </button>
       </div>
-    </div>
+    </>
   );
 };

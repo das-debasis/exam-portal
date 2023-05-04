@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Comment from "../images/chat-bubble.png";
 import axios from "axios";
 import Image from "../images/Learning-bro.png";
+import { Navbar } from "./Navbar";
 export const ThoughtList = () => {
   const user_data = JSON.parse(localStorage.getItem("user"));
   const [thought, setThought] = useState([]);
@@ -67,6 +68,7 @@ export const ThoughtList = () => {
 
   return (
     <div>
+      <Navbar />
       <div className="lefto">
         {err ? <div className="errorMessage1">{err}</div> : null}
         <textarea

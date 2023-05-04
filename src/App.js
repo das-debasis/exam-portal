@@ -6,7 +6,7 @@ import { MyWall } from "./components/MyWall";
 import "./components/index.css";
 import "./components/openform.css";
 import "./components/login.css";
-import "./components/Quiz.css";
+// import "./components/Quiz.css";
 import "./components/Landing.css";
 import "./components/mywall.css";
 import "./components/StartExam.css";
@@ -25,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <AuthState>
-        <Navbar />
         <Routes>
           <Route element={<ProtectRoute />}>
             <Route path="/openforum" element={<ThoughtList />} />

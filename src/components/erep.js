@@ -1,5 +1,6 @@
 import React from "react";
 import { useContext, useState } from "react";
+import { Navbar } from "./Navbar";
 export const Erep = () => {
   const courses = [
     {
@@ -26,17 +27,21 @@ export const Erep = () => {
     },
   ];
   return (
-    <div>
-      {courses.map((item, index) => (
-        <Course
-          courseName={item.courseName}
-          courseImage={item.courseImage}
-          courseDesc={item.courseDesc}
-          courseLink={item.courseLink}
-          key={index}
-        />
-      ))}
-    </div>
+    <>
+      <Navbar />
+
+      <div>
+        {courses.map((item, index) => (
+          <Course
+            courseName={item.courseName}
+            courseImage={item.courseImage}
+            courseDesc={item.courseDesc}
+            courseLink={item.courseLink}
+            key={index}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 function Course({ courseName, courseImage, courseDesc, courseLink }) {

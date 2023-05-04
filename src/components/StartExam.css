@@ -33,7 +33,7 @@
     font-size: 1em;
 }
 .start-container{
-    margin: 7% auto;
+    margin: 2% auto;
     font-family: Poppins;
     text-align: center;
     border-radius: 10px;
@@ -42,9 +42,10 @@
     font-size: 23px;
     padding-bottom: 1%;
 }
-.title{
+.title1{
     padding: 3% 0% 1% 0%;
     font-size: 50px;
+    font-weight: bold;
 }
 .rules{
     text-align: left;

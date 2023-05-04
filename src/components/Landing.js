@@ -1,8 +1,10 @@
 import React from "react";
 import Main from "../images/main.png";
+import { Navbar } from "./Navbar";
 export const Landing = () => {
   return (
     <div className="bdy">
+      <Navbar />
       <div className="landingpage">
         <div className="landtext">
           <span className="good"> GOOD LUCK </span>
@@ -24,10 +26,10 @@ export const Landing = () => {
         <img className="landimage" src={Main} alt="" />
       </div>
       <div className="abt">
-      <br />
-          <span className="good2">ABOUT</span>
-          <div className="rect2"></div>
-          <br />
+        <br />
+        <span className="good2">ABOUT</span>
+        <div className="rect2"></div>
+        <br />
         <div style={{ padding: "0px 40px 40px" }}>
           <table style={{ textAlign: "left", fontSize: "20px" }}>
             <tr>
