@@ -1,0 +1,83 @@
+.question-container{
+    margin: 3% auto;
+    font-family: Poppins;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    width: 55%;
+    font-size: 23px;
+    padding-bottom: 1%;
+}
+h2{
+    padding-top: 5%;
+}
+.timer{
+    margin-top: 3%;
+    font-size: 25px;
+    left: 77%;
+    padding: 1%;
+    position: relative;
+    border: 2px solid black;
+    width: 19.2%;
+}
+/* Style for the options container */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1%;
+    margin-top: 2%;
+  }
+  
+  /* Style for each individual option */
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 25%;
+    cursor: pointer;
+  }
+  
+  /* Style for the option circle */
+  .option-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the selected option circle */
+  .option-circle.selected {
+    border-color: #007bff;
+  }
+  
+  /* Style for the option text */
+  .option-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  button{
+    margin: 4% 5%;
+  }
+  .secured{
+    margin-top: 17%;
+  }
+  .marks{
+    font-size: 200px;
+    margin-left: 5%;
+    float: left;
+  }
+  .sml{
+    margin-top: 85%;
+    float: right;
+    font-size: 50px;
+  }
+  .quiz-results{
+    margin-left: 42%;
+    margin-bottom: 5%;
+  }
