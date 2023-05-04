@@ -2,6 +2,7 @@ import React from "react";
 import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Comment from "../images/chat-bubble.png";
 import axios from "axios";
 import Image from "../images/Learning-bro.png";
 export const ThoughtList = () => {
@@ -92,8 +93,13 @@ export const ThoughtList = () => {
               >
                 {singleData.thoughtText}
                 <br />
-                {singleData.thoughtComments.length} &nbsp;
-                {singleData.thoughtCreatedBy}
+                <div className="comments">
+                  <img className="icon1" src={Comment} alt="" />
+                  <div className="commentLength">
+                    {singleData.thoughtComments.length}
+                  </div>
+                  <div className="createdBy">{singleData.thoughtCreatedBy}</div>
+                </div>
               </div>
             );
           })}
@@ -108,7 +114,10 @@ export const ThoughtList = () => {
           <div className="righto">
             <div className="title">{thought[thoughtind].thoughtText}</div>
             <a className="mainlike" href="">
-              <i className="fa-regular fa-heart"></i> 112 &nbsp;
+              <img className="icon1" src={Comment} alt="" />
+              <div className="commentLength">
+                {thought[thoughtind].thoughtComments.length}
+              </div>
             </a>
             <br />
             <br />
@@ -132,7 +141,7 @@ export const ThoughtList = () => {
                   <div className="card1" key={index}>
                     {i.commentText}
                     <br />
-                    {i.commentCreatedBy}
+                    <div className="createdBy1">{i.commentCreatedBy}</div>
                   </div>
                 );
               })}
