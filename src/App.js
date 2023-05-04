@@ -6,6 +6,7 @@ import { MyWall } from "./components/MyWall";
 import "./components/index.css";
 import "./components/openform.css";
 import "./components/login.css";
+import "./components/Quiz.css";
 import "./components/Landing.css";
 import "./components/mywall.css";
 import "./components/StartExam.css";

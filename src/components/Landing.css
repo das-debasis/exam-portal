@@ -3,8 +3,9 @@
   font-family: "Poppins";
 }
 .abt{
-  text-align: center;
-  margin-top: 70px;
+  text-align: left;
+  margin-top: 5%;
+  padding-left: 4%;
   border-radius: 10px;
   background-color: #fffdfd;
   width: 100%;
@@ -25,4 +26,12 @@ a:hover {
   color: rgba(0, 0, 0, 0.747);
   transition: 0.3s;
   transition-timing-function: ease;
+}
+.rect2{
+    width:7%;
+    height: 5px;
+    text-align: center;
+    margin-left: 1px;
+    background-color: rgb(26, 26, 26);
+
 }

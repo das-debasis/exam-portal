@@ -4,7 +4,7 @@ export const Exam = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
   const [quizCompleted, setQuizCompleted] = useState(false);
-  const [timeRemaining, setTimeRemaining] = useState(120); // 2 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = useState(300);
   const [final, setFinal] = useState([0, 0, 0]);
   const questions = [
     {
@@ -25,6 +25,48 @@ export const Exam = () => {
       options: ["Yen", "Dollar", "Euro", "Pound"],
       answer: "Yen",
     },
+    {
+      id: 4,
+      question: "What is the largest planet in our solar system?",
+      options: ["Jupiter", "Mars", "Venus", "Mercury"],
+      answer: "Jupiter"
+    },
+    {
+      id: 5,
+      question: "What is the smallest country in the world?",
+      options: ["Vatican City", "Monaco", "Nauru", "San Marino"],
+      answer: "Vatican City"
+    },
+    {
+      id: 6,
+      question: "What is the main language spoken in Brazil?",
+      options: ["Portuguese", "Spanish", "French", "Italian"],
+      answer: "Portuguese"
+    },
+    {
+      id: 7,
+      question: "What is the highest mountain in the world?",
+      options: ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"],
+      answer: "Mount Everest"
+    },
+    {
+      id: 8,
+      question: "What is the national animal of Australia?",
+      options: ["Kangaroo", "Koala", "Emu", "Tasmanian devil"],
+      answer: "Kangaroo"
+    },
+    {
+      id: 9,
+      question: "Who was the first person to step on the moon?",
+      options: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
+      answer: "Neil Armstrong"
+    },
+    {
+      id: 10,
+      question: "What is the largest ocean in the world?",
+      options: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+      answer: "Pacific Ocean"
+    }    
   ];
 
   useEffect(() => {
@@ -95,9 +137,9 @@ export const Exam = () => {
           />
         </>
       ) : (
-        <div className="quiz-header">
-          <h1>You secured</h1>
-          <div className="timer">{count}</div>
+        <div className="quiz-results">
+          <h1 className="secured">You secured</h1>
+          <div className="marks">{count}<div className="sml">/10</div></div>
         </div>
         // <Results score={final} handleRestartClick={handleRestartClick} />
       )}
@@ -108,7 +150,6 @@ export const Exam = () => {
 function QuizHeader({ timeRemaining }) {
   return (
     <div className="quiz-header">
-      <h1>Quiz App</h1>
       <div className="timer">{`Time Remaining: ${timeRemaining}`}</div>
     </div>
   );
@@ -139,6 +180,9 @@ function QuestionContainer({
           </label>
         ))}
       </div>
+      <button onClick={handleNextClick}>
+        {!(currentQuestion === questions.length - 1) ? <>Previous</> : <>Submit</>}
+      </button>    
       <button onClick={handleNextClick}>
         {!(currentQuestion === questions.length - 1) ? <>Next</> : <>Submit</>}
       </button>
