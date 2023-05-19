@@ -1,10 +1,10 @@
-After cloning this repo into your local repo,
+After cloning this repo for frontend into your local repo,
 
-Create another folder in VS code,go to terminal 
+Create another folder in VS code for the backend of this application, go to terminal 
 
-`git clone https://github.com/pradoshsahoo/VikashBlog-server`
+`git clone https://github.com/pradoshsahoo/exam-portal-be`
 
-`cd VikashBlog-server`
+`cd exam-portal-be`
 
 `npm install`
 
